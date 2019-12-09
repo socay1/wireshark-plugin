@@ -4,7 +4,7 @@
 do
  local p_SGIP = Proto("SGIP","SGIP","SGIP Protocol")
  local f_Length = ProtoField.uint32("SGIP.length","Message Length",base.DEC)
- local f_CommandId = ProtoField.uint32("SGIP.commandId","Command ID",base.HEX,{[1]="Bind",[0x80000001]="BindResp",[2]="UnBind",[3]="Submit",[0x80000003]="SubmitResp",[4]="Deliver",[0x80000004]="DeliverResp",[5]="Report",[0x80000005]="ReportResp"})
+ local f_CommandId = ProtoField.uint32("SGIP.commandId","Command ID",base.HEX,{[1]="Bind",[0x80000001]="BindResp",[2]="UnBind",[0x80000002]="UnBindResp",[3]="Submit",[0x80000003]="SubmitResp",[4]="Deliver",[0x80000004]="DeliverResp",[5]="Report",[0x80000005]="ReportResp"})
  local f_SequenceId = ProtoField.uint32("SGIP.sequenceId","Sequence ID",base.DEC);
  local f_Data = ProtoField.bytes("SGIP.Data","Data")
  local f_LoginType = ProtoField.uint8("SGIP.loginType","Login Type",base.HEX)
